@@ -2,7 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('room', 'roomController@getAllRooms');
-Route::get('room/{id}', 'roomController@getRoom');
-Route::post('room', 'roomController@createRoom');
-Route::put('room/{id}', 'roomController@updateRoom');
-Route::delete('room/{id}','roomController@deleteRoom');
+Route::get('room', 'App\Http\Controllers\roomController@getAllRooms');
+Route::get('room/{id}', 'App\Http\Controllers\roomController@getRoom');
+Route::post('room', 'App\Http\Controllers\roomController@createRoom');
+Route::put('room/{id}', 'App\Http\Controllers\roomController@updateRoom');
+Route::delete('room/{id}','App\Http\Controllers\roomController@deleteRoom');

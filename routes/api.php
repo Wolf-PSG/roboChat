@@ -21,3 +21,5 @@ Route::get('room/{id}', 'App\Http\Controllers\roomController@getRoom');
 Route::post('room', 'App\Http\Controllers\roomController@createRoom');
 Route::put('room/{id}', 'App\Http\Controllers\roomController@updateRoom');
 Route::delete('room/{id}','App\Http\Controllers\roomController@deleteRoom');
+
+Route::post('chat/{id}', 'App\Http\Controllers\chatController@createChat');

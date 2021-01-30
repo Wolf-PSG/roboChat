@@ -17,10 +17,8 @@ class CreateChatsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('message');
-            $table->foreign('room_id')
-                ->references('id')
-                ->on('rooms')
-                ->onDelete('CASCADE');
+            $table->integer('room_id')->unsigned();
+            $table->foreign('room_id')->references('id')->on('rooms')->onDelete('CASCADE');
             $table->timestamps();
         });
     }

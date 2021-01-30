@@ -1,23 +1,21 @@
 <template>
-    <Header />
-    <img
-        alt="Vue logo"
-        src="./assets/dal43gus8xb61.jpg"
-        style="max-width: 300px;"
-    />
-    <!-- <HelloWorld msg="What's Popping cuzz"/> -->
     <div>
-        <h1 class="best_h1">HIHIHIHIHIHIHIHI</h1>
+        <nav class="navigation">
+            <router-link class="nav_link" to="/forums">
+                Forums
+            </router-link>
+            <router-link class="nav_link" to="/about">
+                About
+            </router-link>
+        </nav>        
+        <router-view />
     </div>
 </template>
 
 <script>
-import Header from './components/header/header.component';
 export default {
     name: "App",
-    components: {
-        Header
-    }
+    components: {}
 };
 </script>
 
@@ -33,5 +31,21 @@ export default {
 .best_h1 {
     position: absolute;
     top: 50%;
+}
+.navigation {
+    height: 100px;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 20px auto;
+    float: right;
+}
+a {
+  text-decorations:none;
+  color:black;
+}
+.nav_link {
+  padding-right: 30px;
 }
 </style>

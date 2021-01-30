@@ -8,18 +8,12 @@ use Illuminate\Http\Request;
 use App\Events\NewMessage;
 class chatController extends Controller
 {
-    public function getAllChats()
-    {
-        $chat = chat::get()->toJson(JSON_PRETTY_PRINT);
-        return response($chat, 200);
-    }
-
     public function getAllMessages($id)
     {
         if (Rooms::where('id', $id)->exists()) {
             $chat = chat::where('room_id', $id)->orderBy('created_at', 'DESC')->get()->toJson(JSON_PRETTY_PRINT);
 
-            return response()->json(
+            return response(
                 $chat
                 , 200);
         } else {

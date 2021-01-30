@@ -1,14 +1,31 @@
 <template>
-    <div>
-        <nav class="navigation">
-            <router-link class="nav_link" to="/forums">
-                Forums
-            </router-link>
-            <router-link class="nav_link" to="/about">
-                About
-            </router-link>
-        </nav>        
-        <router-view />
+    <div class="flex flex-col h-screen justify-between ">
+        <header class="bg-blue-300 p-4">
+            <nav class="flex justify-between">
+                <div>
+                    <router-link to="/">
+                        <font-awesome-icon icon="users" size="3x"/>
+                    </router-link>
+                </div>
+                <ul class="flex flex-row">
+                    <router-link class="pr-10" to="/forums">
+                        <font-awesome-icon icon="comment-dots" size="3x"/>
+                    </router-link>
+                    <router-link class="pr-10" to="/about">
+                        <font-awesome-icon icon="info-circle" size="3x"/>
+                    </router-link>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="flex-grow">
+            <router-view />
+        </main>
+        <footer class="bg-white relative pt-1 border-b-2 border-blue-700">
+            <p class="text-sm text-blue-700 font-bold mb-2">
+                © 2021 By Parmjit Singh Gill
+            </p>
+        </footer>
     </div>
 </template>
 
@@ -18,34 +35,3 @@ export default {
     components: {}
 };
 </script>
-
-<style>
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-}
-.best_h1 {
-    position: absolute;
-    top: 50%;
-}
-.navigation {
-    height: 100px;
-    width: auto;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    margin: 20px auto;
-    float: right;
-}
-a {
-  text-decorations:none;
-  color:black;
-}
-.nav_link {
-  padding-right: 30px;
-}
-</style>

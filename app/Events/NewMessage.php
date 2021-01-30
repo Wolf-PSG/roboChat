@@ -37,4 +37,6 @@ class NewMessage implements ShouldBroadcast
     {
         return new PrivateChannel('roboChat.'.$this->chat->room_id);
     }
+
+    
 }

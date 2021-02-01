@@ -27,7 +27,6 @@ return [
     | each available type of connection are provided inside this array.
     |
     */
-
     'connections' => [
 
         'pusher' => [
@@ -36,13 +35,11 @@ return [
             'secret' => env('PUSHER_APP_SECRET'),
             'app_id' => env('PUSHER_APP_ID'),
             'options' => [
-                'cluster' => env('PUSHER_APP_CLUSTER'),
-                'useTLS' => true,
-                'encrypted' => true,
-                'host' => '127.0.0.1',
+                'clusters' => env('PUSHER_APP_CLUSTER'),
+                // 'encrypted' => false,
+                'host'=> '127.0.0.1',
                 'port' => 6001,
                 'scheme' => 'http'
-            ],
             ],
         ],
 
@@ -62,8 +59,6 @@ return [
 
         'null' => [
             'driver' => 'null',
-        ],
-
+        ]
     ],
-
 ];

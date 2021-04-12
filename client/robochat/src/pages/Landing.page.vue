@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <img
-      class="min-w-1/2 inset-x-0"
-      alt="Vue logo"
-      src="../assets/dal43gus8xb61.jpg"
-      style="max-width: 300px"
-    />
-
-    <h1 class="best_h1">HIHIHIHIHIHIHIHI</h1>
+  <div class="clearfix content-center">
+    <div class="bg-gray-300 mx-4 my-2 p-2 rounded-lg">
+      <p> Welcome to roboChat a secure open messaging platform</p>
+      <p> focusing on anonimity and open speech</p>
+      <p> create a room, chat and repeat </p>
+      <p> rooms and all messages expire in 30 minutes </p>
+    </div>
   </div>
 </template>

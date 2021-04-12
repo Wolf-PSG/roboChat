@@ -4,7 +4,6 @@
 
     <input
       ref="input"
-      class="inline px-2 py-2 h-12 leading-normal block w-3/4 text-gray-800 bg-white font-sans rounded-lg text-left appearance-none outline-none border bg-gray-200 focus:bg-white"
       placeholder="Enter Message"
       v-model="message"
       @keyup.enter="sendMessage()"

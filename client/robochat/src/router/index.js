@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from "vue-router";
+import {createRouter, createWebHistory} from "vue-router";
 import Landing from "@/pages/Landing.page.vue";
 import About from "@/pages/About.page.vue";
 import Forums from "@/pages/Forums.page.vue";

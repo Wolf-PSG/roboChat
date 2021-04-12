@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import axios from "axios";
 import VueAxios from "vue-axios";
 import Echo from "laravel-echo";
-import router from "./router";
+import router from "./router/index.js";
 import App from "./App.vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {

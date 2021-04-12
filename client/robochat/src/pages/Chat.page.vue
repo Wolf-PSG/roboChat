@@ -5,9 +5,9 @@
     </head>
     <!-- TODO implement global store for which page user is on and add name to page title -->
     <h1>Chats Page</h1>
-    <div class="flex flex-col overflow-scroll max-h-px">
+    <div class="flex flex-col overflow-x-scroll rotate-180 max-h-px">
       <Bubble
-        v-for="item in messages"
+        v-for="item in messages.reverse()"
         v-bind:key="item.id"
         v-bind:message="item.message"
         v-bind:name="item.name"
@@ -62,6 +62,8 @@ export default {
         data.forEach((element) => {
           this.messages.push(element);
         });
+        const container = this.$el.querySelector("#container");
+        container.scrollTop = container.scrollHeight;
       });
     },
   },
